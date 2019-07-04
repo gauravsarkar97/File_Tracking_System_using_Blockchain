@@ -12,9 +12,7 @@ It is often seen in big organizations or institutes that files or applications a
 **For example**: The way to obtain a leave application in a college is to write an application to the Department Coordinator who signs and forwards it to the Head of Department(HOD) who forwards it to the Dean who finally approves the leave.<br />
 Using this file tracking system, a student will first write the application and register the file on the system and stick the generated QR code on the application. The coordinator while receiving will enter the details and receive it. The student who wishes to track the file at any time will be able to do it by entering his file ID, which will return a single/series of track IDs. These Track IDs will correspond to the sending and receiving of the file between two users. The entire information will be on the blockchain and will be accessible to the registered users. The task is achieved using a Smart Contract, that has been deployed on the blockchain.
 
-<br />
-<br />
-**FUNCTIONALITIES:**
+**FUNCTIONALITIES**:
 <br />
 **1. Register User**: Users need to register with their details, if they want to use the File Tracking System. There are 3 types of users of this system.  
 A new user has to enter the following details:<br />
