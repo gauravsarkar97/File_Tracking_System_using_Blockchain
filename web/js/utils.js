@@ -1,12 +1,20 @@
  async function init_web3() {
-
+    //Web3 init
+    /*
+    if (typeof web3 != 'undefined') {
+        web3 = new Web3(web3.currentProvider) // what Metamask injected
+    } else {
+        // Instantiate and set Ganache as your provider
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+      */
   var  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
     //Load accounts
-    window.accounts = ["0xdd64d525a73cd50d21af3c08d7e66d3312c6be17"];     //put your account address here
+    window.accounts = ["0xa7f85da8b0a3477cdc586b31db07102d03fb879e"];
     console.log("Loaded accounts");
 
-    // paste ABI here
+    // The interface definition for your smart contract (the ABI)
     window.pm = new web3.eth.Contract([
 	{
 		"constant": false,
@@ -371,7 +379,7 @@
 	}
 ])
 
-	 window.pm.options.address = '0x920132a4af85fe1f751ce5843db8535d83d527eb'   //paste deployed contract address here
+	 window.pm.options.address = '0x480482cb3c5dd359349e570f54401f4618a0b4ee'
 
 }
 export {
