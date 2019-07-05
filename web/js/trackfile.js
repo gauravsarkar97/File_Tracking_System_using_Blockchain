@@ -38,18 +38,6 @@ window.onload = async function () {
             }
           })
 
-        //     window.pm.methods.getDetails(trk_id).call({ from: window.accounts[0]  }, function (error, result) {
-        //   if (error) {
-        //       console.log(error)
-        //       console.log("false")
-        //   } else {
-        //
-        //     document.getElementById("getdetails").textContent = result;
-        //       console.log(result)
-        //       console.log("true")
-        //   }
-        // })
-
           })
 
 }
