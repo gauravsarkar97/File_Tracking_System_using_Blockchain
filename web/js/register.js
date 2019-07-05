@@ -2,6 +2,7 @@ import {  init_web3 } from "./utils.js"
 
 window.onload = async function () {
       var x = await init_web3()
+      console.log("hp")
       document.getElementById("btnnew").addEventListener("click", function () {
         var uniqueid = document.getElementById("unique").value;
         var username = document.getElementById("Uname").value;
@@ -9,8 +10,8 @@ window.onload = async function () {
         var udept = document.getElementById("userdept").value;
         var utype = document.getElementById("usertype").value;
         var repass = document.getElementById("re_password").value;
-
-          window.accounts = ["0xdd64d525a73cd50d21af3c08d7e66d3312c6be17"]
+        //var qr = qrcode(4, 'L');
+          window.accounts = ["0xa7f85da8b0a3477cdc586b31db07102d03fb879e"]
 
           // if(password.trim() != repass.trim()){
           //   document.getElementById("msg").textContent="PASSWORD NOT MATCHING !!!!!!";
@@ -24,17 +25,21 @@ window.onload = async function () {
             window.pm.methods.createParticipant(uniqueid,username,password,udept,utype).send({ from: window.accounts[0] , gas: 500000 }, function (error, result) {
           if (error) {
               console.log(error)
+              console.log("false")
           } else {
             window.pm.methods.getParticipantId().call({ from: window.accounts[0] }, function (error, result) {
           if (error) {
               console.log(error)
+              console.log("false")
           } else {
 
             document.getElementById("user_id").textContent=result-1;
             console.log(result)
-
+            console.log("true")
+            // qr.addData('Hi!');
+            // qr.make();
+            // document.getElementById('placeHolder').innerHTML = qr.createImgTag();
             var res = (result-1).toString();
-            //generate qr code
             let qrcode = new QRCode("output", {
                 text: res,
                 width: 150,
@@ -54,5 +59,7 @@ window.onload = async function () {
           }
         })
           }
+
+
       })
 }

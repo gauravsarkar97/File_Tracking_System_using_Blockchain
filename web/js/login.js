@@ -19,8 +19,7 @@ window.onload = async function () {
               } else {
                   console.log(result)
                   //window.location.href = "newFile.html";
-                  if(result == 1)    //if all details are correct userLogin returns true or 1
-                  {
+                  if(result == 1){
                     window.location.href = "newFile.html";
                   }
 
